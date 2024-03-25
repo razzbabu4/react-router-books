@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <navbar className="navbar px-4 lg:px-24 lg:mt-8">
+        <navbar className="navbar bg-white px-4 lg:px-24 lg:pt-8 fixed z-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,7 +36,7 @@ const NavBar = () => {
                         <NavLink to='/' style={({ isActive}) => {
                             return {
                                 backgroundColor: isActive ? "white" : "",
-                                border: isActive ? "2px solid green" : "",
+                                border: isActive ? "1px solid green" : "",
                                 color: isActive ? "#23BE0A" : "",
                             };
                         }}>Home</NavLink>
@@ -46,7 +46,7 @@ const NavBar = () => {
                         <NavLink to='/booklists' style={({ isActive}) => {
                             return {
                                 backgroundColor: isActive ? "white" : "",
-                                border: isActive ? "2px solid green" : "",
+                                border: isActive ? "1px solid green" : "",
                                 color: isActive ? "#23BE0A" : "",
                             };
                         }}> Listed Books</NavLink>
@@ -55,7 +55,7 @@ const NavBar = () => {
                         <NavLink to='/pages-read' style={({ isActive}) => {
                             return {
                                 backgroundColor: isActive ? "white" : "",
-                                border: isActive ? "2px solid green" : "",
+                                border: isActive ? "1px solid green" : "",
                                 color: isActive ? "#23BE0A" : "",
                             };
                         }}>Pages to Read</NavLink>
