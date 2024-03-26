@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import { CiStar } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 const BookCard = ({ book }) => {
 
-    const { image, tags, bookName, author, category, rating } = book
+    const {bookId, image, tags, bookName, author, category, rating } = book
     return (
         <div>
-            <div className="card w-full bg-base-100 shadow-xl p-6 border">
+            <Link to={`/book/${bookId}`} className="card w-full bg-base-100 shadow-xl p-6 border">
                 <figure className='bg-[#faf9f9]'><img className='h-80 py-10' src={image} alt="books" /></figure>
                 <div className="card-body px-0 pb-2">
                     <ul className="flex gap-6 text-[#23BE0A] font-medium text-lg pl-2">
@@ -21,7 +22,7 @@ const BookCard = ({ book }) => {
                         <span>{category}</span> <span className='flex items-center gap-2'>{rating} <CiStar className='text-xl' /></span>
                     </div>
                 </div>
-            </div>
+            </Link>
         </div>
     );
 };
