@@ -4,6 +4,8 @@ import Home from "../pages/Home";
 import ListedBooks from "../pages/ListedBooks";
 import PagesRead from "../pages/PagesRead";
 import BookDetails from "../components/BookDetails";
+import Read from "../components/Read";
+import Wishlists from "../components/Wishlists";
 
 export const router = createBrowserRouter([
     {
@@ -17,7 +19,17 @@ export const router = createBrowserRouter([
         },
         {
             path: '/booklists',
-            element: <ListedBooks/>
+            element: <ListedBooks/>,
+            children: [
+              {
+                index: true,
+                element: <Read/>
+              },
+              {
+                path: 'wishlist',
+                element: <Wishlists/>
+              }
+            ]
         },
         {
             path: '/pages-read',
