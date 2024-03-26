@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLoaderData } from "react-router-dom";
 
 const ListedBooks = () => {
+    const books = useLoaderData();
     const [activeTab, setActiveTab] = useState(0);
     return (
-        <div className="px-4 lg:px-24 lg:my-8 text-center">
+        <div className="px-4 lg:px-24 lg:my-8">
             <div className="h-24 rounded-md bg-[#1313130D] flex items-center justify-center">
                 <h1 className="text-3xl font-bold">Books</h1>
             </div>
-            <div className="my-6">
+            <div className="my-6 mx-auto text-center">
                 <details className="dropdown">
                     <summary className="btn m-1 text-white bg-[#23BE0A]">Sort By <IoIosArrowDown /></summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
@@ -21,7 +22,7 @@ const ListedBooks = () => {
             </div>
 
 
-            <div className="flex float-left mx-4 overflow-x-auto overflow-y-hidden flex-nowrap text-gray-100 w-full flex-grow">
+            <div className="flex lg:justify-start overflow-x-auto overflow-y-hidden flex-nowrap text-gray-100 w-full flex-grow">
 
                 <Link
                 to=''
@@ -37,7 +38,7 @@ const ListedBooks = () => {
                     <span>Wishlist</span>
                 </Link>
             </div>
-            <Outlet/>
+            <Outlet books={books}/>
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import { savedBookData, savedWishlistData } from "../utility/localStorage";
+import { savedBookData, savedWishlistData } from "../utility/localstorage.js";
 
 
 const BookDetails = () => {
