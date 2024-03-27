@@ -44,7 +44,7 @@ const savedWishlistData = (id) => {
         toast.warning('Already exist in read')
     }
     else if(existWishlists) {
-        toast.warning("Already exist in wishlist")
+        toast.warning("Already added to wishlist")
     }
 }
 

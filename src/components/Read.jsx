@@ -11,7 +11,7 @@ const Read = () => {
     useEffect(() => {
         const storedReadBook = getStoredBookData();
 
-        if (books.length) {
+        if (books.length > 0) {
             const readBook = books.filter(book => storedReadBook.includes(book.bookId));
             setReaded(readBook)
         }

@@ -29,7 +29,8 @@ export const router = createBrowserRouter([
               },
               {
                 path: 'wishlist',
-                element: <Wishlists/>
+                element: <Wishlists/>,
+                loader: () => fetch('/books.json'),
               }
             ]
         },
