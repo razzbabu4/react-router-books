@@ -23,7 +23,7 @@ const savedBookData = (id) => {
 
 
 const getStoredWishlistData = () => {
-    const storeWishlist = localStorage.getItem('wbooks');
+    const storeWishlist = localStorage.getItem('w-books');
     if (storeWishlist) {
         return JSON.parse(storeWishlist);
     }
@@ -33,11 +33,13 @@ const getStoredWishlistData = () => {
 const savedWishlistData = (id) => {
     const storedBooks = getStoredBookData();
     const storeWishlists = getStoredWishlistData();
+
     const existWishlists = storeWishlists.find(bookId => bookId === id);
     const existBook = storedBooks.find(bookId => bookId === id);
-    if (!existBook && !existWishlists) {
-        storedBooks.push(id);
-        localStorage.setItem('wbooks', JSON.stringify(storedBooks));
+    
+    if (!existWishlists && !existBook) {
+        storeWishlists.push(id);
+        localStorage.setItem('w-books', JSON.stringify(storeWishlists));
         toast.success("Added to wishlist successfully")
     }
     else if(existBook){

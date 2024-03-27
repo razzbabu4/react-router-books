@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { Link, Outlet, useLoaderData } from "react-router-dom";
+import { Link, Outlet} from "react-router-dom";
 
 const ListedBooks = () => {
-    const books = useLoaderData();
     const [activeTab, setActiveTab] = useState(0);
     return (
         <div className="px-4 lg:px-24 lg:my-8">
@@ -38,7 +37,7 @@ const ListedBooks = () => {
                     <span>Wishlist</span>
                 </Link>
             </div>
-            <Outlet books={books}/>
+            <Outlet/>
         </div>
     );
 };

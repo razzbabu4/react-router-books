@@ -5,7 +5,6 @@ import ReadedBook from "./ReadedBook";
 
 const Read = () => {
     const books = useLoaderData();
-    // console.log(books)
     const [readed, setReaded] = useState([]);
 
     useEffect(() => {

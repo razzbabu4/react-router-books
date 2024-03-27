@@ -7,7 +7,6 @@ const Home = () => {
         <div className="px-4 lg:px-24 lg:mt-8">
             <Banner></Banner>
             <Books></Books>
-            
         </div>
     );
 };
