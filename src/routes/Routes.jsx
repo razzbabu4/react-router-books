@@ -6,11 +6,15 @@ import PagesRead from "../pages/PagesRead";
 import BookDetails from "../components/BookDetails";
 import Read from "../components/Read";
 import Wishlists from "../components/Wishlists";
+import ErrorPage from "../pages/ErrorPage";
+import AboutUs from "../pages/AboutUs";
+import ContactUs from "../pages/ContactUs";
 
 export const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayouts />,
+      errorElement: <ErrorPage/>,
       children: [
         {
             path: '/',
@@ -38,6 +42,14 @@ export const router = createBrowserRouter([
             path: '/pages-read',
             element: <PagesRead/>,
             loader: () => fetch('/books.json'),
+        },
+        {
+          path: '/about',
+          element: <AboutUs/>
+        },
+        {
+          path: '/contact',
+          element: <ContactUs/>
         },
         {
           path: '/book/:id',

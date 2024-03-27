@@ -34,27 +34,30 @@ const PagesRead = () => {
   }, [books])
 
   return (
-    <div className="px-4 lg:px-24 lg:mt-8">
-      <BarChart
-      width={1000}
-      height={500}
-      data={readed}
-      margin={{
-        top: 20,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey='bookName' />
-      <YAxis />
-      <Bar dataKey='totalPages' fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-        {readed.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-        ))}
-      </Bar>
-    </BarChart>
+    <div className="px-4 lg:px-24 lg:mt-8 flex justify-center items-center">
+      <div className='border-2 text-center p-6 rounded-lg'>
+        <BarChart
+          
+          width={1000}
+          height={500}
+          data={readed}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey='bookName' />
+          <YAxis />
+          <Bar dataKey='totalPages' fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+            {readed.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+            ))}
+          </Bar>
+        </BarChart>
+      </div>
     </div>
   );
 };
