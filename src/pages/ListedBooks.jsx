@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { Link, Outlet} from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+
+
 
 const ListedBooks = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -24,20 +26,21 @@ const ListedBooks = () => {
             <div className="flex lg:justify-start overflow-x-auto overflow-y-hidden flex-nowrap text-gray-100 w-full flex-grow">
 
                 <Link
-                to=''
-                onClick={()=> setActiveTab(0)}
-                    rel="noopener noreferrer" className={`flex items-center px-5 py-3 space-x-2 ${activeTab === 0? 'border border-b-0 text-black flex-grow-0' : 'border-b text-gray-400'}  rounded-t-lg border-gray-700`}>
+                    to=''
+                    onClick={() => setActiveTab(0)}
+                    rel="noopener noreferrer" className={`flex items-center px-5 py-3 space-x-2 ${activeTab === 0 ? 'border border-b-0 text-black flex-grow-0' : 'border-b text-gray-400'}  rounded-t-lg border-gray-700`}>
                     <span>Read</span>
                 </Link>
 
                 <Link
-                to='wishlist'
-                onClick={()=> setActiveTab(1)}
-                    rel="noopener noreferrer" className={`flex items-center flex-grow px-5 py-3 space-x-2 ${activeTab === 1? 'border border-b-0 text-black flex-grow-0' : 'border-b text-gray-400'} rounded-t-lg border-gray-700`}>
+                    to='wishlist'
+                    onClick={() => setActiveTab(1)}
+                    rel="noopener noreferrer" className={`flex items-center flex-grow px-5 py-3 space-x-2 ${activeTab === 1 ? 'border border-b-0 text-black flex-grow-0' : 'border-b text-gray-400'} rounded-t-lg border-gray-700`}>
                     <span>Wishlist</span>
                 </Link>
+
             </div>
-            <Outlet/>
+            <Outlet />
         </div>
     );
 };

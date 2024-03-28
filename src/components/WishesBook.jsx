@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { IoPeopleOutline } from "react-icons/io5";
 import { MdOutlineFindInPage } from "react-icons/md";
+import PropTypes from 'prop-types';
 
 const WishesBook = ({ wish }) => {
     const { bookId, image, bookName, author, category, tags, totalPages, publisher, yearOfPublishing, rating } = wish
@@ -35,4 +36,7 @@ const WishesBook = ({ wish }) => {
     );
 };
 
+WishesBook.propTypes = {
+    wish: PropTypes.object
+}
 export default WishesBook;

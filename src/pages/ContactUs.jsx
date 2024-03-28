@@ -1,6 +1,10 @@
+import { toast } from "react-toastify";
 
 
 const ContactUs = () => {
+    const handleSubmit = () => {
+        toast.success('Submitted Successfully')
+    }
     return (
         <div className="px-4 lg:px-24 lg:mt-8">
             <div className="h-24 rounded-md bg-[#1313130D] flex items-center justify-center my-10">
@@ -47,7 +51,7 @@ const ContactUs = () => {
                             <span className="mb-1 font-bold">Message</span>
                             <textarea rows="3 border" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-300 dark:bg-gray-100"></textarea>
                         </label>
-                        <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-[#59C6D2] dark:text-gray-50 hover:dark:ring-[#61ceda]">Submit</button>
+                        <button onClick={handleSubmit} type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-[#59C6D2] dark:text-gray-50 hover:dark:ring-[#61ceda]">Submit</button>
                     </form>
                 </div>
             </section>
