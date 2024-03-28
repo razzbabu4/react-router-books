@@ -4,7 +4,7 @@ import NavBar from "../NavBar/NavBar";
 const MainLayouts = () => {
     return (
         <div>
-            <div className="h-24">
+            <div>
                 <NavBar />
             </div>
             <div>

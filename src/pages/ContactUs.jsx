@@ -7,7 +7,7 @@ const ContactUs = () => {
     }
     return (
         <div className="px-4 lg:px-24 lg:mt-8">
-            <div className="h-24 rounded-md bg-[#1313130D] flex items-center justify-center my-10">
+            <div className="h-24 rounded-md bg-[#1313130D] flex items-center justify-center my-5 lg:my-10">
                 <h1 className="text-3xl text-center font-bold">Contact us</h1>
             </div>
             <section className="py-6 dark:bg-gray-100 dark:text-gray-900">
@@ -51,7 +51,7 @@ const ContactUs = () => {
                             <span className="mb-1 font-bold">Message</span>
                             <textarea rows="3 border" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-300 dark:bg-gray-100"></textarea>
                         </label>
-                        <button onClick={handleSubmit} type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-[#59C6D2] dark:text-gray-50 hover:dark:ring-[#61ceda]">Submit</button>
+                        <button onClick={handleSubmit} type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-[#59C6D2] dark:text-white hover:dark:ring-[#61ceda]">Submit</button>
                     </form>
                 </div>
             </section>

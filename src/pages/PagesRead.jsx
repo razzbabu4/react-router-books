@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from 'recharts';
 import { getStoredBookData } from '../utility/localstorage';
 
 
@@ -34,7 +34,7 @@ const PagesRead = () => {
   }, [books])
 
   return (
-    <div className="px-4 lg:px-24 lg:mt-8">
+    <div className="lg:px-24 lg:mt-8">
       <div className='chart-container w-full h-72 lg:h-[500px]'>
         <ResponsiveContainer width='100%' height='100%'>
           <BarChart
@@ -49,6 +49,7 @@ const PagesRead = () => {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey='bookName' />
             <YAxis />
+            <Tooltip/>
             <Bar dataKey='totalPages' fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
               {readed.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={colors[index % 20]} />
