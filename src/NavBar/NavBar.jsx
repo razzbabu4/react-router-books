@@ -21,6 +21,12 @@ const NavBar = () => {
                             <NavLink to='/pages-read'>Pages to Read</NavLink>
                         </li>
                         <li>
+                            <NavLink to='/contact'>Contact Us</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/about'>About Us</NavLink>
+                        </li>
+                        <li>
                             <a>Sign in</a>
                         </li>
                         <li>

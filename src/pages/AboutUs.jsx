@@ -1,11 +1,11 @@
 
 const AboutUs = () => {
     return (
-        <div className="px-4 lg:px-24 lg:mt-8">
+        <div className="px-6 lg:px-24 lg:mt-8">
             <div className="h-24 rounded-md bg-[#1313130D] flex items-center justify-center mb-5 lg:my-10">
                 <h1 className="text-3xl text-center font-bold">About us</h1>
             </div>
-            <p> <span className="lg:text-3xl text-[#23BE0A] font-medium">Welcome to BookNest,</span> <span className="text-base leading-5 lg:leading-10">your cozy online nook for all things literature! At BookNest, we are passionate about books and the transformative power of storytelling. Our mission is simple: to connect book lovers with their next great read and foster a vibrant community around the written word.
+            <p> <span className="lg:text-2xl text-[#23BE0A] font-medium">Welcome to BookNest,</span> <span className="text-base leading-5 lg:leading-10">your cozy online nook for all things literature! At BookNest, we are passionate about books and the transformative power of storytelling. Our mission is simple: to connect book lovers with their next great read and foster a vibrant community around the written word.
 
                 Founded by avid readers, BookNest was born out of a shared love for exploring new worlds, diving into diverse perspectives, and discovering the magic that unfolds within the pages of a book. Whether you are a seasoned bibliophile or just embarking on your reading journey, BookNest is here to accompany you every step of the way.
 

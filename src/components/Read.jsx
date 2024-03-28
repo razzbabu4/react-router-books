@@ -46,7 +46,7 @@ const Read = () => {
                     </ul>
                 </details>
             </div>
-            <div className="grid gap-6 mt-10">
+            <div className="grid gap-6 mt-5 lg:mt-10">
                 {
                     sortBook.map(read => <ReadedBook key={read.bookId} read={read} />)
                 }

@@ -7,20 +7,20 @@ import { IoIosArrowDown } from "react-icons/io";
 const Wishlists = () => {
     const books = useLoaderData();
     const [wishes, setWishes] = useState([]);
-    const [sortBook, setSortBook] = useState([]);
+    const [sortBookWish, setSortBookWish] = useState([]);
 
     const handleJobsFilter = filterText => {
         if (filterText === 'rating') {
             const rating = wishes.slice().sort((a,b)=> b.rating - a.rating)
-            setSortBook(rating)
+            setSortBookWish(rating)
         }
         else if (filterText === 'pages') {
             const pages = wishes.slice().sort((a,b)=> b.totalPages - a.totalPages)
-            setSortBook(pages)
+            setSortBookWish(pages)
         }
         else if (filterText === 'year') {
             const year = wishes.slice().sort((a,b)=> b.yearOfPublishing - a.yearOfPublishing)
-            setSortBook(year)
+            setSortBookWish(year)
         }
     }
 
@@ -30,7 +30,7 @@ const Wishlists = () => {
         if (books.length > 0) {
             const wishesBook = books.filter(book => storedWishlistBook.includes(book.bookId));
             setWishes(wishesBook);
-            setSortBook(wishesBook);
+            setSortBookWish(wishesBook);
         }
     }, [books])
     return (
@@ -47,7 +47,7 @@ const Wishlists = () => {
             </div>
             <div className="grid gap-6 mt-10">
                 {
-                    sortBook.map(wish => <WishesBook key={wish.bookId} wish={wish}/>)
+                    sortBookWish.map(wish => <WishesBook key={wish.bookId} wish={wish}/>)
                 }
             </div>
         </div>
